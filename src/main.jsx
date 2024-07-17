@@ -7,6 +7,7 @@ import Home from './components/Home/Home'
 import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import Github,{githubInfoLoader} from './components/Github/Github.jsx'
+import User from './components/User/User.jsx'
 
 // const router = createBrowserRouter
 // ([
@@ -45,7 +46,9 @@ const router = createBrowserRouter(
     loader={githubInfoLoader}
     path='github' 
     element={<Github/>}/>
+    <Route path='users/:id' element={<User />}/>
    </Route>
+  
   )
 )
 ReactDOM.createRoot(document.getElementById('root')).render(
